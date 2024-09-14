@@ -1,22 +1,27 @@
 <?php
 	class Employee {
-		private $name;
+		public $name;
+		private $salary;
 		
-		public function setName($name) {
-			$this->name = $name;	// $this->name references the class property
+		public function setSalary($salary) {
+			$this->salary = $salary;	// $this->salary references the class property
 		}
 		
-		public function getName() {
-			return $this->name;		// $this->name references the class property
+		public function getSalary() {
+			return $this->salary;		// $this->salary references the class property
 		}
 	}
 	
 	// Creating an object of the Employee class
 	$employee = new Employee();
 	
-	// Set the name using the setName method
-	$employee->setName("Israk Ahmed");
+	$employee->name = "Israk Ahmed";
 	
-	// Get the name using the getName method and print it
-	echo $employee->getName();
+	// Set the salary using the setSalary method
+	$employee->setSalary(1234.5);
+	
+	echo "Name: " . $employee->name . "\n";
+	
+	// Get the salary using the getSalary method and print it
+	echo "Salary: " . $employee->getSalary();
 ?>
